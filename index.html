@@ -4,35 +4,84 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Document</title>
+        <link href="style.css" rel="stylesheet"/>
+
     </head>
-    <header>
-        <nav class="menu">
-            <ul>
-            <a href="https://">Home</a></li>
-            <a href="https://">Recipies</a></li>
-            <a href="https://">Tutorials</a></li>
-            <a href="https://">Submissions</a></li>
-            <a href="https://">Flavor of the Week</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div>
     <body>
-        <h1>BK</h1>
-        <img src="https://images.squarespace-cdn.com/content/v1/5531eb6de4b0c759b385ac75/1560479909116-HN4PHGEH8P3URAE0OAQ6/Screen+Shot+2019-06-13+at+6.26.02+PM.png?format=1000w" alt="hand with long acrylic finger nails grabing breakfast meats with tongs" />
-        <p>Have you ever gotten a craving for something simple like baked chicken? But maybe not just any old baked chicken. You want it baked like your favorite auntie would do it—with the mustard marinade and tri-color peppers. You need to know the mustard brand, the exact seasoning blend, and if she baked it in a cast iron or not. In BAPs kitchen you’ll find every herb and spice, every teaspoon and handful. We crafted this website to compile recipes passed down and around from friends and family alike.</p>
+        <header>
+            <img src="https://lh3.googleusercontent.com/7kpus22QCHL8JHS4N18t4_qSN-EH5ZLJQ_XbqHG1TBECgUhvHOrlPM1coF5p4jZbwbouTy17BSnS58sHyrXQZpO2YKOs0oS16jc2ee0Wrz9J8GnLptHNVRfwHWCI7xa1ABZWOtkDTBa6G9ZGdQ1HQudHcZsmi2aSoLo5nYnpq9cxxg8-DV1PqwEhVmTxydcpbOEjxT3qC3Z_lMEsm_YhdY5S7sp755Txq2NoVwrCabk2jtHuVYpde6p2HkhHkLucBNqrHNTDDyHefMJgRist6mBHdch_KNOni8nQX8vQA4yNvF5Fps9N8UpPYz6kvJ_tHHrnsJjmEIqWyo9lYMp5WkeV34q-DYQQJA_PkwG3U6KG2x4K1K5qRE9O5_D2Zdb2E8HIrrZciUt1hpN5hoOsKZRTttPzaS_HDA8x_tGm1yS6Fer9bb7Z1fW0HPz1Q2tyVQfLgKONHXO1BjkT-HAfz3XFTXw3tnvM7QCBnwryDQHj20FUr805Q61cQXupgpkF4J6wrGMdilFv8T2y1xfOLbfI4OX1kZAJezSxvO2YkcVn8tnv2ZGyOGPUR6gZDlFEJj7a8TJHIkTJrq2hycZZirvcDhdnDl4emkEpRMXUjeex3_RWMuu6veShKkEOWUypP-w0M14Nc8zyWF2mLMdiik_OdNVbLPdS9FJDEU7pVZKCIz_PwAmKnDiPw_MQEb0NXyJav68DBmastbGPFQp-bqq2Go8X6FV5uSKbqev8_Nky6KMoSHjTCFUH_DUcVuHgtXlVBxWiuvJTj4ololuqB0ku-426631nHmmJZmvALR-395J6sBJKsiXwnZukPwGVrdvzl4UUaG-GwkS94UACF89wk57aUZwdPZlKn6k6Wtn9LbyTyiFTWn291jzqsqAJw2eoS_NYpZcuWnj8zA2lOntVn5-AmsiElvPEBNX2xjYI6u9BS8iyNOcGu0FNSdx10L5mBM6PiVRjvhjw26qGuQ=s500-no?authuser=1"/>
+                <nav class="menu">
+                    <ul>
+                    <li><a href="https://">Home</a></li>
+                    <li><a href="https://">Recipies</a></li>
+                    <li><a href="https://">Tutorials</a></li>
+                    <li><a href="https://">Submissions</a></li>
+                    <li><a href="https://">Flavor of the Week</a></li>
+                    </ul>
+                </nav>
+        </header>
+            <main>
+                <figure>
+                    <img id="bap" src="https://ohtillawrites.files.wordpress.com/2019/05/screenshot-2019-05-23-at-14.30.42.png" alt="black woman with measuring cup" id="the-image">
+                    <figcaption>“--remember, the same day we plant our seeds is not the same day we eat the fruit.”
+                        <br>    ― Tabitha Brown</figcaption>
+                </figure>
+                
+                         <p>Have you ever gotten a craving for something simple like baked chicken? But maybe not just any old baked chicken.
+                            You want it baked like your favorite auntie would do it—with the mustard marinade and tri-color peppers.
+                            You need to know the mustard brand, the exact seasoning blend, and if she baked it in a cast iron or not.
+                            In BAPs Kitchen you'll find every herb and spice, every teaspoon and handful. We crafted this website to compile recipes passed down and around from friends and family alike.</p>
+
+                            <form name="plates" id="plates">
+                                <input type="number" name="platecount" id="platecount" placeholder="How many plates you want?">
+                                <input type="button" value="Get Cookin" onclick="plateloop()">
+                            </form>
+                            <div id="loopSection">
+                                
+                            </div>
+            </main>
+        
     </body>
+    
+    <div id="form-container">
+        <div id="form-inner-container">
+            <div id= "submissions">
+                <h3>Submit Your Own Recipe</h3>
+                <form name="form" id="form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Name">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+
+                    <label for="recipe">Recipe</label>
+                    <input type="text" name="recipe" id="recipe" placeholder="Start mixin' the fixins">
+
+                    <div id="form-controls">
+                        <button onclick="formValidation()" name="submit" id="submitbutton">Submit</button>
+                    </div>
+
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms"> I agree to the <a href="#" class="termsLink">Terms of Service</a> and <a href="#" class="termsLink">Privacy Policy</a>.</label>
+
+                </form>
+
+            </div>
+        </div>
     </div>
+
     <footer>
         <nav class="menu">
             <ul>
-              <a href="https://">Home</a></li>
-              <a href="https://">Recipies</a></li>
-              <a href="https://">Tutorials</a></li>
-              <a href="https://">Submissions</a></li>
-              <a href="https://">Flavor of the Week</a></li>
+              <li><a href="https://">Home</a></li>
+              <li><a href="https://">Recipies</a></li>
+              <li><a href="https://">Tutorials</a></li>
+              <li><a href="https://">Submissions</a></li>
+              <li><a href="https://">Flavor of the Week</a></li>
             </ul>
         </nav>
     </footer>
-      
+
+    <script src="script.js"></script>
+
 </html>
