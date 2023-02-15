@@ -3,13 +3,13 @@
 function plateloop(){
     let counter = document.getElementById('platecount').value;
 
-    let plate = document.createElement("IMG");
-    plate.setAttribute("scr", "plate.jpg");
-    plate.setAttribute("width", "150");
-    plate.setAttribute("height", "150");
-    plate.setAttribute("alt", "fish plate with spaghetti");
-
     while (counter > 0) {
+
+        let plate = document.createElement("IMG");
+        plate.setAttribute("src", "plate.jpg");
+        plate.setAttribute("width", "150");
+        plate.setAttribute("height", "150");
+        plate.setAttribute("alt", "fish plate with spaghetti");
 
         document.getElementById('loopSection').appendChild(plate);
         counter --;
@@ -18,6 +18,8 @@ function plateloop(){
 }
 
 function formValidation() {
+    event.preventDefault();
+
     let email = document.getElementById("email").value;
     let recipe = document.getElementById("recipe").value;
     let terms = document.getElementById("terms");
@@ -43,7 +45,7 @@ function formValidation() {
     if (!terms.checked) {
         alert('Please agree to terms of service');
     }
-
-    alert ("Recipe submission clompete");
+    if ( (dns != undefined) && (recipe != '') && (terms.checked) )
+        alert ("Recipe submission complete");
 
 }
