@@ -108,7 +108,9 @@ footer li a {
     border-radius: 8px;
     box-shadow: 0 0 20px #231f20;
     align-self: center;
+    max-width: 500px;
 }
+
 
 
 #submissions {
